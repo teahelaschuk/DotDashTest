@@ -1,0 +1,305 @@
+<html>
+<head>
+    <title>What</title>
+    <script type="text/javascript">
+
+        function openOptions() {
+            /*var elements = document.getElementsByClassName('main-screen');
+            for (var i = 0, length = elements.length; i < length; i++) {
+                elements[i].style.display = 'none';
+            }
+            */
+
+            document.getElementById('main-screen').style.display = 'none';
+            document.getElementById('options-screen').style.display = "block";
+            document.getElementById('return').style.display = "block";
+            document.getElementById('title').innerHTML = "Options._"
+
+        }
+
+        function openScores() {
+            document.getElementById('main-screen').style.display = 'none';
+            document.getElementById('badges-screen').style.display = 'none';
+            document.getElementById('scores-screen').style.display = "block";
+            document.getElementById('return').style.display = "block";
+            document.getElementById('badges').style.display = "block";
+            document.getElementById('title').innerHTML = "Scores._"
+        }
+
+        function openBadges() {
+            document.getElementById('scores-screen').style.display = 'none';
+            document.getElementById('badges-screen').style.display = "block";
+            document.getElementById('badge-return').style.display = "block";
+            document.getElementById('return').style.display = "none";
+            document.getElementById('title').innerHTML = "Badges._"
+
+        }
+
+        function openCredits() {
+            document.getElementById('main-screen').style.display = 'none';
+            document.getElementById('credits-screen').style.display = "block";
+            document.getElementById('return').style.display = "block";
+            document.getElementById('title').innerHTML = "DotDash._"
+        }
+
+        function openMainMenu() {
+            document.getElementById('options-screen').style.display = 'none';
+            document.getElementById('scores-screen').style.display = 'none';
+            document.getElementById('credits-screen').style.display = 'none';
+            document.getElementById('return').style.display = 'none';
+            document.getElementById('main-screen').style.display = 'block';
+            document.getElementById('title').innerHTML = "DotDash._"
+
+        }
+    </script>
+    <style>
+
+        body {
+            background-image: url(http://67.media.tumblr.com/7c3666d39c96411c9afe9fb9f3f8f1c6/tumblr_nx9v0ljA5W1ukkmqvo1_1280.jpg);
+        }
+
+        header {
+            width: 80%;
+            margin: auto;
+            background-color: #32CD32;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+
+        }
+
+        h1 {
+            font-family: "Consolas";
+            text-align: center;
+            padding-bottom: 5px;
+        }
+
+        #wrapper {
+            width: 80%;
+            margin: auto;
+            background-color: mediumslateblue;
+
+        }
+
+        #gameframe {
+            border: 4px solid white;
+            background-color: black;
+            width: 400px;
+            height: 600px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #title {
+            color: #32CD32;
+            font-family: "Consolas";
+            font-size: 50px;
+            position: absolute;
+            top: 10px;
+            display: block;
+        }
+
+        #mode-selection-container {
+            margin-top: 40%;
+            height: 200px;
+            background-color: black;
+        }
+
+        .mode-select {
+            width: 210px;
+            height: 210px;
+            margin: auto;
+            border: 15px solid black;
+            border-radius: 50%;
+        }
+
+
+        #mode-1 {
+            background: dodgerblue;
+            float: left;
+            margin-left: -120px;
+
+        }
+
+        #mode-2 {
+            background: magenta;
+        }
+
+        #mode-3 {
+            background: yellow;
+            float: right;
+            margin-right: -120px;
+        }
+
+        #mode-2:hover {
+            transform:scale(1.05,1.05);
+
+        }
+
+        .nongameplay-buttons {
+            background-color: black;
+            border: none;
+            display: inline-block;
+            position: absolute;
+            bottom: 5px;
+        }
+
+        .nongameplay-buttons:hover {
+            transform:scale(1.2,1.2);
+
+        }
+
+        #left-arrow {
+            bottom: 30%;
+            left: 15%;
+        }
+
+        #right-arrow {
+            bottom: 30%;
+            right: 15%;
+        }
+
+        #options {
+            left: 5px;
+        }
+
+        #scores {
+            left: 70px;
+        }
+
+        #credz {
+            right: 5px;
+        }
+
+        #return {
+            display: none;
+        }
+
+        #badges {
+            display:none;
+            right: 5px;
+
+        }
+
+        #options-screen {
+            display: none;
+        }
+
+        #scores-screen {
+            display:none;
+        }
+
+        #badges-screen {
+            display:none;
+        }
+
+        #credits-screen {
+            display:none;
+        }
+
+        #steve-button {
+            background-color: black;
+            border: none;
+        }
+
+        p {
+            color: white;
+            font-family: "Consolas";
+            margin: 0;
+            font-size: 75%;
+        }
+
+        #cred-box {
+            width: 70%;
+            margin: auto;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            font-family: "Consolas";
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <br/>
+        <h1>DotDash Prototype</h1>
+    </header>
+
+    <div id="wrapper">
+        <br/>
+        <div id="gameframe">
+            <div id="title">DotDash._&nbsp </div>
+
+            <!-- buttons and elements used in the main menu screen ----------------------------------------->
+            <div id="main-screen">
+
+                <div id="mode-selection-container">
+                    <button class="mode-select" id="mode-1">MODE1</button>
+                    <button class="mode-select" id="mode-2">MODE2</button>
+                    <button class="mode-select" id="mode-3">MODE3</button>
+
+                    <button class="nongameplay-buttons" id="left-arrow"><img src="images/arrowLeft.png"/></button>
+                    <button class="nongameplay-buttons" id="right-arrow"><img src="images/arrowRight.png"/></button>
+                </div>
+
+                <button onclick="openOptions()" class="nongameplay-buttons" id="options"><img src="images/gear.png"></button>
+                <button onclick="openScores()" class="nongameplay-buttons" id="scores"><img src="images/trophy.png"></button>
+                <button onclick="openCredits()" class="nongameplay-buttons" id="credz"><img src="images/exclamation.png"></button>
+            </div>
+
+            <!-- common button used to return to the main menu -->
+            <button onclick="openMainMenu()" class="nongameplay-buttons" id="return"><img src="images/backward.png"/></button>
+
+            <div id="options-screen">
+                <br/>
+                <br/>
+                <br/>
+                <p style="color:white">options page</p>
+            </div>
+
+            <div id="scores-screen">
+                <br/>
+                <br/>
+                <br/>
+                <p style="color:white">highscorez</p>
+                <button onclick="openBadges()" class="nongameplay-buttons" id="badges"><img src="images/forward.png"/></button>
+            </div>
+
+            <div id="badges-screen">
+                <br/>
+                <br/>
+                <br/>
+                <p style="color:white">badges</p>
+                <button onclick="openScores()" class="nongameplay-buttons" id="badge-return"><img src="images/backward.png"/></button>
+            </div>
+
+            <div id="credits-screen">
+                <div id="cred-box">
+                    <h2>created by:</h2>
+                    <h2><b>THE SURVEYORS</b></h2>
+                    <img src="images/dot-magenta.png"/>
+                    <p>Jake Superior</p>
+                    <img src="images/dot-yellow.png"/>
+                    <p>Frisky Dingo</p>
+                    <img src="images/dot-green.png"/>
+                    <p>Jenkinz</p>
+                    <img src="images/dot-blue.png"/>
+                    <p>ZIA</p>
+                    <img src="images/dot-purple.png"/>
+                    <p>A Sponge</p><br/>
+                    <button onclick="steveMode()" id="steve-button"><img src="images/crow.png" width="60" height="60"/></button>
+                </div>
+            </div>
+        </div>
+        <br/>
+
+    </div>
+</body>
+</html>
